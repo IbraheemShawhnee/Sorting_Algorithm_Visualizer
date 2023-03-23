@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
+
+.container {
+  text-align: center;
+  padding-top: 70px;
+  font-family: "Caveat", cursive;
+  justify-content: center;
+}
+
+.title {
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+
+.controllers {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.controllers button {
+  padding: 15px 40px 15px 40px;
+  background-color: white;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.rangebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+.rangebar .value {
+  position: absolute;
+  font-size: 18px;
+  color: #045fa4;
+  font-weight: 600;
+}
+.rangebar .value-left {
+  left: -22px;
+}
+.rangebar .value-right {
+  right: -43px;
+}
+
+.range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #045fa4;
+  border: 1px solid #045fa4;
+  cursor: pointer;
+}
+
+.range input::-moz-range-progress {
+  background: #664aff;
+}
+
+.sliderValue {
+  position: relative;
+  width: 100%;
+}
+.sliderValue span {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -40px;
+  line-height: 55px;
+  z-index: 2;
+  color: black;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.sliderValue span.show {
+  transform: translateX(-250%);
+}
+.sliderValue span:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #045fa4;
+  border: 3px solid black;
+  z-index: -1;
+
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.up {
+  padding-bottom: 50px;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* width: 400px;
+  height: 480px;
+  background-color: #045fa4; */
+}
+
+.chart {
+  background-color: #045fa4;
+}
+
+.bars_container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+.bar {
+  width: 30px;
+  background-color: #bad7e9;
+  margin: 0 2px;
+  border-radius: 2px;
+  transition: transform 2s linear;
+}
+
+.buttons_container > button,
+select {
+  width: 200px;
+  height: 30px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid black;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.2s ease-in-out;
+}

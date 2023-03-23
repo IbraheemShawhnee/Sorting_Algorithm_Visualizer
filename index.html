@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sorting Visualizer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="up">
+        <div class="title">Sorting Algorithms Visualizer</div>
+        <div class="controllers">
+          <button id="randomize_array_btn">Randomize</button>
+          <button id="sort_btn">Solve</button>
+          <select name="" id="algo">
+            <option value="bubble">Bubble Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="heap">Heap Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+          </select>
+          <h4>Array Size:</h4>
+          <div class="rangebar">
+            <div class="value-left">5</div>
+            <input
+              type="range"
+              id="slider"
+              min="5"
+              max="100"
+              value="55"
+              steps="1"
+            />
+            <div class="value-right">100</div>
+            <div class="sliderValue">
+              <span>55</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="down">
+        <div class="bars_container" id="bars_container"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
