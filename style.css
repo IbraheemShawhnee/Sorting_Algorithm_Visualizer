@@ -89,7 +89,6 @@
   background: #045fa4;
   border: 3px solid black;
   z-index: -1;
-
   border-bottom-left-radius: 50%;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 50%;
@@ -105,24 +104,34 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  /* width: 400px;
-  height: 480px;
-  background-color: #045fa4; */
 }
 
 .chart {
   background-color: #045fa4;
 }
 
-.bars_container {
+.barsContainer {
   display: flex;
   align-items: flex-end;
   flex-direction: row;
+  background-color: #292936;
+  height: 200px;
 }
 
 .bar {
   width: 30px;
   background-color: #bad7e9;
+  margin: 0 2px;
+  border-radius: 2px;
+  transition: transform 2s linear;
+}
+
+.barr {
+  color: red;
+}
+.bar::after {
+  width: 30px;
+  background-color: #ffb84c;
   margin: 0 2px;
   border-radius: 2px;
   transition: transform 2s linear;
