@@ -29,3 +29,5 @@ Install my-project with git
 ## Screenshots
 
 ![App Screenshot](ScreenShot.png)
+
+![App Screenshot](ScreenShotTwo.png)
