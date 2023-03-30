@@ -82,7 +82,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-//Bubble Sort
+//Bubble Sort implementation`1
 async function bubbleSort(array) {
   let bars = document.getElementsByClassName("bar");
   for (let i = 0; i < array.length; i++) {
@@ -220,12 +220,9 @@ async function mergeSort(arr) {
       arr[k] = right[j];
       j++;
     }
+    bars[k].innerHTML = arr[k];
     bars[k].style.height = arr[k] * heightFactor + "px";
     bars[k].style.backgroundColor = "#bad7e9";
-    if (k + arr.length < bars.length) {
-      bars[k + arr.length].style.height = arr[k] * heightFactor + "px";
-      bars[k + arr.length].style.backgroundColor = "#bad7e9";
-    }
     await sleep(speedFactor);
     k++;
   }
@@ -236,6 +233,7 @@ async function mergeSort(arr) {
     await sleep(speedFactor);
     i++;
     k++;
+    console.log("I");
   }
   while (j < right.length) {
     arr[k] = right[j];
@@ -244,6 +242,7 @@ async function mergeSort(arr) {
     await sleep(speedFactor);
     j++;
     k++;
+    console.log("J");
   }
   for (let k = 0; k < bars.length; k++) {
     bars[k].style.backgroundColor = "#bad7e9";
